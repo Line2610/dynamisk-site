@@ -1,0 +1,37 @@
+.logo {
+  text-decoration: none;
+  color: red;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.menu li {
+  text-decoration: none;
+}
+
+.seasons_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.box {
+  padding: 20px;
+  width: 40%;
+  border: solid 3px black;
+  margin: 0 auto; /* Centrerer boksene */
+}
+
+.box a {
+  text-decoration: none;
+}
