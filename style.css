@@ -26,15 +26,22 @@ h1 {
   padding-top: 30px;
 }
 
-.h1 {
+h2 {
   font-family: "raleway", sans-serif;
-  font-size: 50px;
+  font-weight: 500;
+  font-size: medium;
 }
 
-h2 {
+h3 {
   font-family: "raleway", sans-serif;
   font-weight: 300;
   font-size: medium;
+}
+
+label[for="size"] {
+  font-family: "roboto", sans-serif; /* Skifter skrifttype */
+  font-size: 16px; /* Ændrer skriftstørrelse */
+  font-weight: 300;
 }
 
 main {
@@ -77,6 +84,7 @@ header {
 .menu li {
   text-decoration: none;
   display: block;
+  font-family: "roboto";
 }
 
 .seasons_list_container {
@@ -126,32 +134,48 @@ header {
   color: white;
   font-family: "roboto", sans-serif;
 }
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 
 img {
   width: 100%;
 }
 
-.grid_1-1 img {
-  width: 80%;
+.produkt_tekst {
+  padding-top: 40px;
   display: flex;
-  justify-items: center;
+  flex-direction: column;
+}
+
+.produkt_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  align-items: start;
+}
+
+.produkt_billede {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produkt_billede img {
+  max-width: 80%;
+  height: auto;
+  object-fit: cover; /* Sørger for at billedet ser pænt ud */
+}
+
+.produkt_info {
   padding-top: 40px;
 }
 
-.product-info {
+.produkt_purchase,
+.produkt_info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.product-info .price,
-.product-info .color {
-  padding-left: 60px; /* Rykker kun Price og Color til højre */
-  padding-bottom: 10px;
+  gap: 1rem; /* Mellemrum mellem tekst*/
 }
 
 .box-container {
@@ -162,35 +186,38 @@ img {
   flex-wrap: wrap;
 }
 
-.size {
-  border: solid 3px grey;
-  padding: 10px;
-  width: 50%;
+#size {
+  padding: 8px;
+  width: 60%;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  margin-top: 40px;
 }
 
 .basket {
-  border: solid 3px grey;
+  border: solid 3px black;
   padding: 20px;
   width: 60%;
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: gray;
+  background-color: black;
   cursor: pointer;
+  color: white;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 768px) {
   .product_list_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .produkt_container {
+    grid-template-columns: 1fr 1fr; /* 2 kolonner: billede | tekst */
+    gap: 3rem;
+  }
+
+  .produkt_billede {
+    justify-self: center; /* Centrer billedet horisontalt */
   }
 }

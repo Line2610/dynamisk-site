@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Product</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Pirata+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <script src="produkt.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,23 +24,29 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="grid_1-1">
-        <img src="img/hvid.webp" alt="t-shirt" />
-        <div class="product-info">
-          <h1 class="h1">White Solid Round Neck T-Shirt</h1>
-          <div>
-            <p class="price">Price: 3999</p>
-            <p class="color">Color: White</p>
-          </div>
-          <div class="box-container">
-            <div class="size">
-              <p>Size</p>
-            </div>
-            <div class="basket">
-              <p>Add to basket</p>
-            </div>
-          </div>
+    <main class="produkt_container">
+      <div class="produkt_billede">
+        <img src="https://kea-alt-del.dk/t7/images/webp/640/1588.webp" alt="billede af t-shirt" />
+      </div>
+      <div class="produkt_tekst">
+        <div class="produkt_purchase">
+          <h2>White Solid Round Neck T-Shirt</h2>
+          <p>1.399 kr</p>
+          <label for="size">Choose a size</label>
+          <select id="size">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <button class="basket">Add to basket</button>
+        </div>
+        <div class="produkt_info">
+          <h2>Information</h2>
+          <p>Model name<br />White Solid Round Neck T-Shirt</p>
+          <p>Color<br />White</p>
+          <p>Inventory number<br />1163</p>
         </div>
       </div>
     </main>
