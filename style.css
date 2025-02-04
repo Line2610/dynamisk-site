@@ -116,7 +116,7 @@ header {
 
 .product_list_container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 80px;
   position: relative;
@@ -126,6 +126,10 @@ header {
   color: black;
 }
 
+.product_list_container p {
+  padding-bottom: 10px;
+}
+
 .sale {
   position: absolute;
   top: 10px;
@@ -133,6 +137,11 @@ header {
   background-color: red;
   color: white;
   font-family: "roboto", sans-serif;
+}
+
+.product_cart a {
+  font-family: "roboto";
+  font-weight: 300;
 }
 
 img {
@@ -207,9 +216,10 @@ img {
 }
 
 @media (min-width: 768px) {
-  .product_list_container {
+  main .product_list_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
   }
 
   .produkt_container {
