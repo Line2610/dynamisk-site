@@ -18,8 +18,8 @@ fetch(`https://Kea-alt-del.dk/t7/api/products/${productId}`)
         <div class="produkt_purchase">
           <h2>${data.productdisplayname}</h2>
           <p>${data.price} kr</p>
-          <p class="tilbud_produkt ${data.discount && "isOnSale"}">${data.discount}</p>
-          <p class="udsolgt ${data.soldout && "soldOut"}">Udsolgt</p>
+          <p class="tilbud_produkt ${data.discount && "isOnSale"}">-${data.discount}%</p>
+          <p class="udsolgt_produkt ${data.soldout && "soldOut"}">Udsolgt</p>
           <label for="size">Choose a size</label>
           <select id="size">
             <option value="XS">XS</option>

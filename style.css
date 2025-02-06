@@ -119,9 +119,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin-top: 80px;
-  position: relative;
-  padding-bottom: 50px;
+  margin-top: 50px;
+  padding-bottom: 30px;
 }
 
 .product_list_container a {
@@ -133,28 +132,38 @@ header {
 }
 
 .tilbud_liste {
-  position: absolute;
   background-color: red;
   color: white;
   font-family: "roboto", sans-serif;
-  padding: 10x;
   visibility: hidden;
+  width: 30%;
+  padding: 5px 10px;
 }
 
 .tilbud_produkt {
   background-color: red;
   color: white;
   font-family: "roboto", sans-serif;
-  padding: 10x;
   visibility: hidden;
-  position: absolute;
-  top: 10px; /* Justér så det sidder i venstre hjørne */
-  left: 10x;
+  width: 10%;
   padding: 5px 10px;
+}
+
+.udsolgt_produkt {
+  visibility: hidden;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  top: 600px;
 }
 
 .udsolgt {
   visibility: hidden;
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 10px;
 }
 
 .isOnSale {
@@ -183,8 +192,8 @@ header {
 .product_cart {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Fordel indholdet jævnt */
-  flex-grow: 1; /* Sørg for, at boksen fylder pladsen i containeren */
+  justify-content: space-between;
+  flex-grow: 1;
   background-color: #fbfbf8; /* Eksempel på baggrundsfarve */
   padding: 10px;
   box-sizing: border-box;

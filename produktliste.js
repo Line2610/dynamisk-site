@@ -10,13 +10,13 @@ fetch(`https://kea-alt-del.dk/t7/api/products/?season=${mySeason}`)
   .then((data) => showList(data));
 
 function showList(products) {
-  console.log(products);
+  console.log("products er ", products);
 
   let markup = "";
-
   markup = products
-    .map((product) => {
-      return `<div class="product_cart">
+    .map(
+      (product) =>
+        `<div class="product_cart">
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.basecolour}" />
           </a>
           <h3>${product.productdisplayname}</h3>
@@ -24,8 +24,8 @@ function showList(products) {
           <p class="tilbud_liste ${product.discount && "isOnSale"}">-${product.discount}%</p>
         <p class="udsolgt ${product.soldout && "soldOut"}">Udsolgt</p>
           <a href="produkt.html?productid=${product.id}">Read more</a>
-        </div>`;
-    })
+        </div>`
+    )
     .join("");
 
   productContainer.innerHTML = markup;
